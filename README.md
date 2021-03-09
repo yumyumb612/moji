@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<div style="padding: 25px 50px;", align="center">
+<div style="padding: 25px 50px; border-style: solid; border-width: 5px; border-color: white;", align="center">
 <h1>moji</h1>
 <img src="https://user-images.githubusercontent.com/75433579/110415389-c5942180-805f-11eb-8488-5aa3eaa5761c.png"/>
 <h5>moji the new whoelsome emoji/bot</h5>
