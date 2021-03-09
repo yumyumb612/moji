@@ -5,8 +5,18 @@
 <img src="https://user-images.githubusercontent.com/75433579/110415389-c5942180-805f-11eb-8488-5aa3eaa5761c.png"/>
 <h5>moji the new whoelsome emoji/bot</h5>
 
+**developer** 
 ```text
-developer: yumyumyumyum#6512
+yumyumyumyum#6512
+```
+**moji discord guild**
+```text
+https://discord.gg/mvZnq5REku
+```
+**libs**
+```text
+python version: 3.9.1
+discord.py version: 1.6.0
 ```
 </div>
 
