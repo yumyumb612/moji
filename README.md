@@ -1,4 +1,4 @@
-[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=yumm-b612&theme=onedark&show_icons=true)](https://github.com/anuraghazra/github-readme-stats) [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yumm-b612&layout=compact&theme=onedark)](https://github.com/anuraghazra/github-readme-stats)
+<!--[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=yumm-b612&theme=onedark&show_icons=true)](https://github.com/anuraghazra/github-readme-stats) [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yumm-b612&layout=compact&theme=onedark)](https://github.com/anuraghazra/github-readme-stats)-->
 
 <div align="center">
 <h1>moji</h1>
@@ -6,14 +6,10 @@
 <h5>moji the new whoelsome emoji/bot</h5>
 </div>
 
-<details>
-
- 
 ```text
 developer: yumyumyumyum#6512
 
 ```
 
-</details>
  
 
