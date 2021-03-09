@@ -12,7 +12,7 @@ yumyumyumyum#6512
 ```
 **moji discord guild**
 ```text
-https://discord.gg/mvZnq5REku
+https://discord.gg/Qd654mTkeK
 ```
 **libs**
 ```text
