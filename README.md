@@ -9,6 +9,7 @@
  
 ```text
 developer: yumyumyumyum#6512
+[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=yumm-b612&theme=blueberry&show_icons=true)](https://github.com/anuraghazra/github-readme-stats) [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yumm-b612&layout=compact&theme=blueberry)](https://github.com/anuraghazra/github-readme-stats)
 
 ```
 
