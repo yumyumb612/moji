@@ -9,7 +9,7 @@
 
 
 
-<div style="background-color:Tomato;" align="center">
+<div align="center">
 
  **developer** 
  ```text
