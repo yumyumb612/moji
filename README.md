@@ -10,7 +10,7 @@
 <a href="https://discord.gg/Qd654mTkeK"><img width="150" height="100" src="https://discord.com/assets/e4923594e694a21542a489471ecffa50.svg"/></a>
 </div>
 
-<div style="padding: 25px 50px; border-style: solid; border-width: 5px;", align="center">
+<div style="padding: 25px 50px; border-style: solid; border-width: 5px; border-color: white;", align="center">
  
 **developer** 
 ```text
