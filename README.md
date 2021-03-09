@@ -5,7 +5,7 @@
 </div>
 
 <details>
- **moji.py**
+
  
 ```text
 developer: yumyumyumyum#6512
