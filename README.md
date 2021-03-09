@@ -6,17 +6,13 @@
 <h5>moji the new whoelsome emoji/bot</h5>
  
 <a href="https://discord.gg/Qd654mTkeK">
-<img width="100" height="80" src="https://discord.com/assets/e4923594e694a21542a489471ecffa50.svg"/>
+<img width="150" height="100" src="https://discord.com/assets/e4923594e694a21542a489471ecffa50.svg"/>
 </a>
  
 **developer** 
 ```text
 kshly aka yum
 yumyumyumyum#6512
-```
-**moji discord guild**
-```text
-https://discord.gg/Qd654mTkeK
 ```
 **libs**
 ```text
