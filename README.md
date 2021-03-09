@@ -6,9 +6,7 @@
 
 <details>
 ```text
- 
 developer: yumyumyumyum#6512
-
 ```
 </details>
  
