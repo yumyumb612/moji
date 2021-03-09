@@ -4,7 +4,9 @@
 <h1>moji</h1>
 <img src="https://user-images.githubusercontent.com/75433579/110415389-c5942180-805f-11eb-8488-5aa3eaa5761c.png"/>
 <h5>moji the new whoelsome emoji/bot</h5>
-
+<a href="https://discord.gg/Qd654mTkeK">
+<img src="https://discord.com/assets/e4923594e694a21542a489471ecffa50.svg"/>
+</a>
 **developer** 
 ```text
 kshly aka yum
