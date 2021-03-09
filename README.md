@@ -9,7 +9,7 @@
 
 
 
-<div style="padding: 25px 50px; border-style: solid; border-width: 5px; border-color: white;" align="center">
+<div style="background-color:Tomato;" align="center">
 
  **developer** 
  ```text
