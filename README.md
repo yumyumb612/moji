@@ -16,8 +16,8 @@ https://discord.gg/Qd654mTkeK
 ```
 **libs**
 ```text
-python version: 3.9.1
-discord.py version: 1.6.0
+python version 3.9.1
+discord.py version 1.6.0
 ```
 </div>
 
