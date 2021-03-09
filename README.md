@@ -7,7 +7,6 @@
 
 ```text
 developer: yumyumyumyum#6512
-
 ```
 </div>
 
