@@ -2,6 +2,7 @@
 <div style="padding: 25px 50px; border-style: solid; border-width: 5px; border-color: white;", align="center">
  <h1>moji</h1>
  <img src="https://user-images.githubusercontent.com/75433579/110415389-c5942180-805f-11eb-8488-5aa3eaa5761c.png"/>
+ <br>
  <a href="https://discord.gg/Qd654mTkeK"><img width="150" height="100" src="https://discord.com/assets/e4923594e694a21542a489471ecffa50.svg"/></a>
  <h5>moji the new whoelsome emoji/bot</h5>
 </div>
