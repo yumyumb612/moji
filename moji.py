@@ -1,7 +1,8 @@
 import discord
 from discord.ext import commands
 
-import config as MOJI
+import utils.config as MOJI
+import utils.tools as TOOLS
 
 ##########################################################
 ##                                                      ##
@@ -11,13 +12,14 @@ import config as MOJI
 
 #   moji
 moji = commands.Bot(
-    command_prefix=MOJI.get_prefix,
+    command_prefix=TOOLS.get_prefix,
     description=MOJI.description,
     case_insensitive=True,
     intents=MOJI.intents,
     owner_id=MOJI.developer)
+ 
+TOOLS.log(moji)
+TOOLS.load_cogs(moji)
+TOOLS.load_manager(moji)
 
-MOJI.log(moji)
-MOJI.load_cogs(moji)
-
-moji.run(MOJI.token())
+moji.run(MOJI.classified('token'))
