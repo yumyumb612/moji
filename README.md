@@ -17,6 +17,6 @@
  Python 3.9.1
  Discord 1.0.1
  Discord.py 1.6.0
- pyGitub 1.54.1
+ pyGithub 1.54.1
  ```
 </div>
