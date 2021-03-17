@@ -24,7 +24,7 @@
   <a href="https://code.visualstudio.com/"><img src="https://i.giphy.com/media/LMt9638dO8dftAjtco/200.webp" width="100" /></a>
   <a href="https://www.python.org/"><img src="https://i.giphy.com/media/IdyAQJVN2kVPNUrojM/200.webp" width="100" /></a>
   <br>
-  <a href="https://discord.gg/NaXhwqWxV9"><img src="https://user-images.githubusercontent.com/75433579/111535082-18946580-873f-11eb-9965-caa0085d437c.png"/></a>
+  <a href="https://discord.gg/NaXhwqWxV9"><img width="150" height="100" src="https://user-images.githubusercontent.com/75433579/111535082-18946580-873f-11eb-9965-caa0085d437c.png"/></a>
  </p>
  </div>
 </div>
