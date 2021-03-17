@@ -1,13 +1,5 @@
 <!--[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=yumm-b612&theme=onedark&show_icons=true)](https://github.com/anuraghazra/github-readme-stats) [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yumm-b612&layout=compact&theme=onedark)](https://github.com/anuraghazra/github-readme-stats)-->
 
-<style>
-.avatar {
-  vertical-align: middle;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-</style>
 
 <div align="center">
  <h1>moji</h1>
@@ -19,7 +11,7 @@
  
  **developer** 
   <br>
-   <img src="https://cdn.discordapp.com/attachments/819660765018980393/821816728202903622/20210309_224533.jpg" alt="Avatar" class="avatar"> 
+   <img style="width="100" height="50" src="https://cdn.discordapp.com/attachments/819660765018980393/821816728202903622/20210309_224533.jpg"/>
  
   ```text
   kshly aka yum
