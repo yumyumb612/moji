@@ -9,10 +9,12 @@
  <b>moji the new whoelsome emoji/bot</b>
 
 
- <h2>developer<h2> 
- <img styles="border: 2px solid red; border-radius: 25px;" width="100" height="100" src="https://cdn.discordapp.com/attachments/819660765018980393/821816728202903622/20210309_224533.jpg"/>
- <br>
- <b>yumyumyumyum#6512</b>
+ <details>
+  <summary>developer</summary>
+  <img styles="border: 2px solid red; border-radius: 25px;" width="100" height="100" src="https://cdn.discordapp.com/attachments/819660765018980393/821816728202903622/20210309_224533.jpg"/>
+  <br>
+  <b>yumyumyumyum#6512</b>
+ </details>
 
 
  <br><br>
