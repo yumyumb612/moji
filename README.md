@@ -10,7 +10,7 @@
  
  **developer** 
   <br>
-  <img width="100" height="100" src="https://cdn.discordapp.com/attachments/819660765018980393/821816728202903622/20210309_224533.jpg"/>
+  <img styles="border: 2px solid red; border-radius: 25px;" width="100" height="100" src="https://cdn.discordapp.com/attachments/819660765018980393/821816728202903622/20210309_224533.jpg"/>
   <dev>
     yumyumyumyum#6512
   </dev>
