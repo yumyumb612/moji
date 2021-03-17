@@ -10,7 +10,7 @@
  
  **developer** 
   <br>
-  <img style="width: 50; height: 50; border: 5px solid black" src="https://cdn.discordapp.com/attachments/819660765018980393/821816728202903622/20210309_224533.jpg"/>
+  <img style="width: 10; height: 10; border: 5px solid white" src="https://cdn.discordapp.com/attachments/819660765018980393/821816728202903622/20210309_224533.jpg"/>
  
   ```text
   kshly aka yum
