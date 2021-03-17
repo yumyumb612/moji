@@ -5,15 +5,17 @@
  <h1>moji</h1>
  
  <img width="280" height="300" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/moji.png"/>
+ <br>
  <b>moji the new whoelsome emoji/bot</b>
 </div>
 
 <div align="left">
  
  <h3>developer<h3> 
+  <dev align="center">
   <img styles="border: 2px solid red; border-radius: 25px;" width="100" height="100" src="https://cdn.discordapp.com/attachments/819660765018980393/821816728202903622/20210309_224533.jpg"/>
- <dev>
-   yumyumyumyum#6512
+   <br>
+   <b>yumyumyumyum#6512</b>
  </dev>
  
  <div align = "center">
