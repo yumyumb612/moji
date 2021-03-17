@@ -23,8 +23,8 @@
  <p>
   <a href="https://code.visualstudio.com/"><img src="https://i.giphy.com/media/LMt9638dO8dftAjtco/200.webp" width="100" /></a>
   <a href="https://www.python.org/"><img src="https://i.giphy.com/media/IdyAQJVN2kVPNUrojM/200.webp" width="100" /></a>
-  <a href="https://discord.gg/NaXhwqWxV9"><img width="180" height="130" src="https://discord.com/assets/e4923594e694a21542a489471ecffa50.svg"/></a>
+  <br>
+  <a href="https://discord.gg/NaXhwqWxV9"><img width="180" height="130" src="https://user-images.githubusercontent.com/75433579/111535082-18946580-873f-11eb-9965-caa0085d437c.png"/></a>
  </p>
  </div>
- 
 </div>
