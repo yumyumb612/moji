@@ -9,18 +9,20 @@
 <div style="Padding: 0px; margin: 0px" align="center">
  
  **developer** 
- <img style="width: 50; height: 50; border: 5px solid black;" src="https://cdn.discordapp.com/attachments/819660765018980393/821816728202903622/20210309_224533.jpg"/>
+  <br>
+  <img style="width: 50; height: 50; border: 5px solid black" src="https://cdn.discordapp.com/attachments/819660765018980393/821816728202903622/20210309_224533.jpg"/>
  
- ```text
- kshly aka yum
- yumyumyumyum#6512
- ```
+  ```text
+  kshly aka yum
+  yumyumyumyum#6512
+  ```
  
  **libs**
- ```text
- Python 3.9.1
- Discord 1.0.1
- Discord.py 1.6.0
- pyGithub 1.54.1
- ```
+ 
+  ```text
+  Python 3.9.1
+  Discord 1.0.1
+  Discord.py 1.6.0
+  pyGithub 1.54.1
+  ```
 </div>
