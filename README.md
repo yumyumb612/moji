@@ -3,7 +3,7 @@
 
 <div align="center">
  <h1>moji</h1>
- <img width="250" height="200" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/moji.png"/><h5>moji the new whoelsome emoji/bot</h5>
+ <img width="250" height="300" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/moji.png"/><h5>moji the new whoelsome emoji/bot</h5>
  <br>
  <a href="https://discord.gg/NaXhwqWxV9"><img width="180" height="130" src="https://discord.com/assets/e4923594e694a21542a489471ecffa50.svg"/></a>
 </div>
