@@ -11,20 +11,16 @@
  <h3>developer<h3> 
   <br>
   <img styles="border: 2px solid red; border-radius: 25px;" width="100" height="100" src="https://cdn.discordapp.com/attachments/819660765018980393/821816728202903622/20210309_224533.jpg"/>
-  <dev>
-    yumyumyumyum#6512
-  </dev>
+ <dev>
+   yumyumyumyum#6512
+ </dev>
  
  <div align = "center">
-  <p>
-   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yumm-b612&theme=dark&layout=compact" />
- </p>
  <p>
  <img src="https://i.giphy.com/media/LMt9638dO8dftAjtco/200.webp" width="100">
   <img src="https://i.giphy.com/media/IdyAQJVN2kVPNUrojM/200.webp" width="100">
   <img src="https://i.giphy.com/media/KzJkzjggfGN5Py6nkT/200.webp" width="100">
  </p>
-  
-</div>
+ </div>
  
 </div>
