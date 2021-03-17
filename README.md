@@ -3,13 +3,14 @@
 
 <div align="center">
  <h1>moji</h1>
- <img width="280" height="300" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/moji.png"/><h5>moji the new whoelsome emoji/bot</h5>
- <a href="https://discord.gg/NaXhwqWxV9"><img width="180" height="130" src="https://discord.com/assets/e4923594e694a21542a489471ecffa50.svg"/></a>
+ 
+ <img width="280" height="300" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/moji.png"/>
+ <b>moji the new whoelsome emoji/bot</b>
 </div>
+
 <div align="left">
  
  <h3>developer<h3> 
-  <br>
   <img styles="border: 2px solid red; border-radius: 25px;" width="100" height="100" src="https://cdn.discordapp.com/attachments/819660765018980393/821816728202903622/20210309_224533.jpg"/>
  <dev>
    yumyumyumyum#6512
@@ -23,4 +24,8 @@
  </p>
  </div>
  
+</div>
+
+<div align="right">
+<a href="https://discord.gg/NaXhwqWxV9"><img width="180" height="130" src="https://discord.com/assets/e4923594e694a21542a489471ecffa50.svg"/></a>
 </div>
