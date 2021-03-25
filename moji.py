@@ -24,4 +24,4 @@ TOOLS.log(moji)
 TOOLS.load_cogs(moji)
 TOOLS.load_manager(moji)
 
-moji.run(MOJI.classified('token'))
+moji.run(TOOLS.classified('token'))
