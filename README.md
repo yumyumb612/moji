@@ -6,8 +6,7 @@
  <h4>moji the new whoelsome emoji/bot</h4>
 <details>
  <summary>developer</summary>
- <img styles="border: 2px solid red; border-radius: 25px;" width="100" height="100" src="https://cdn.discordapp.com/attachments/819660765018980393/821816728202903622/20210309_224533.jpg"/>
- <br>
+ <img width="100" height="100" src="https://avatars.githubusercontent.com/u/75433579?v=4"/>
  <h3>yumyumyumyum#6512</h3>
 </details>
 
