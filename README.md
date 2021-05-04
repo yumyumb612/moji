@@ -17,11 +17,11 @@ join moji's <a href="https://discord.gg/NaXhwqWxV9"><img width="88.6" height="21
 <div align="right">
   <div align="left">
     <b>powered by</b>
-    <br>
-    <p>
-      <a href="https://code.visualstudio.com/"><img src="https://i.giphy.com/media/IdyAQJVN2kVPNUrojM/200.webp" width="100" /></a>
-      <a href="https://www.python.org/"><img src="https://i.giphy.com/media/LMt9638dO8dftAjtco/200.webp" width="100" /></a>
-    </p>
   </div>
+  <br>
+  <p>
+    <a href="https://code.visualstudio.com/"><img src="https://i.giphy.com/media/IdyAQJVN2kVPNUrojM/200.webp" width="100" /></a>
+    <a href="https://www.python.org/"><img src="https://i.giphy.com/media/LMt9638dO8dftAjtco/200.webp" width="100" /></a>
+  </p>
  
 </div>
