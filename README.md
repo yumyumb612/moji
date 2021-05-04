@@ -5,10 +5,10 @@
 <img align="left" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/moji%20profiles/moji.png"/>
 
 <i><b>moji the new whoelsome emoji/bot</b></i>
-<br>
- <b>developer:</b> <br>
-  <img width="100" height="100" src="https://avatars.githubusercontent.com/u/75433579?v=4"/>
-  <b>discord:</b> yumyumyumyum#6512 <br> <b>am yumyum aka yum</b>
+<br> <br>
+<b>developer:</b> <br>
+<img width="100" height="100" src="https://avatars.githubusercontent.com/u/75433579?v=4"/>
+<b>discord:</b> yumyumyumyum#6512 <br> <b>am yumyum aka yum</b>
 
 <div align="center">
  <br><br>
