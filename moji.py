@@ -110,13 +110,7 @@ class butt(commands.AutoShardedBot):
             if int(ctx.author.id) == int(self.owner_id):
                 await ctx.channel.send(content=msg, delete_after=time)
             else:
-                best_song="""
-                    ||Never gonna give you up
-                    Never gonna let you down
-                    Never gonna run around and desert you
-                    Never gonna make you cry
-                    Never gonna say goodbye
-                    Never gonna tell a lie and hurt you||"""
+                best_song="""..."""
                 await ctx.send(content=f"**sowy ur not allowd to use dis command!**\n{best_song}", hidden=True)
 
 if __name__ == "__main__":
