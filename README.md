@@ -4,11 +4,9 @@
 
  <img align="left" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/moji%20profiles/moji.png"/>
  <h4>moji the new whoelsome emoji/bot</h4>
-<details>
- <summary>developer</summary>
+ <b>developer</b> <br>
  <img width="100" height="100" src="https://avatars.githubusercontent.com/u/75433579?v=4"/>
  <h3>yumyumyumyum#6512</h3>
-</details>
 
 <div align="center">
  <br><br>
