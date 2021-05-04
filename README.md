@@ -7,7 +7,7 @@
 <i><b>moji the new whoelsome emoji/bot</b></i>
 <br><br>
 <b>developer:</b> <br>
-<img align="left" width="20" height="20" src="https://avatars.githubusercontent.com/u/75433579?v=4"/>
+<img align="left" width="5" height="5" src="https://avatars.githubusercontent.com/u/75433579?v=4"/>
 <b>discord:</b> yumyumyumyum#6512 <br> <b>hewo am yumyum aka yum</b>
 <br>
 join moji's <a href="https://discord.gg/NaXhwqWxV9"><img width="350" height="100" src="https://discord.com/assets/9babbea9acbfec5302d832bae6c3c184.svg"/></a> server
