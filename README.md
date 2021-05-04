@@ -9,10 +9,10 @@
 <b>developer:</b> <br>
 <img align="left" width="150" height="150" src="https://avatars.githubusercontent.com/u/75433579?v=4"/>
 <b>discord:</b> yumyumyumyum#6512 <br> <b>hewo am yumyum aka yum</b>
-<br>
+<br><br>
 join moji's <a href="https://discord.gg/NaXhwqWxV9"><img width="88.6" height="21.6" src="https://raw.githubusercontent.com/yumm-b612/moji.py/f888e44b6319f2a9519de7d4fdd04c9294595fad/branding%20logos/discord/Discord-Wordmark-Color.svg"/></a> server
 
-<div align="center">
+<div align="right">
   <br><br><br>
   <b>powered by</b>
   <p>
