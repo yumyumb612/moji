@@ -5,13 +5,13 @@
 <img align="left" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/moji%20profiles/moji.png"/>
 
 <i><b>moji the new whoelsome emoji/bot</b></i>
-<br> <br>
+<br><br>
 <b>developer:</b> <br>
 <img align="left" width="100" height="100" src="https://avatars.githubusercontent.com/u/75433579?v=4"/>
-<b>discord:</b> yumyumyumyum#6512 <br> <b>am yumyum aka yum</b>
+<b>discord:</b> yumyumyumyum#6512 <br> <b>hewo am yumyum aka yum</b>
 
 <div align="center">
- <br><br>
+ <br><br><br>
  <b>powered by</b>
  <p>
  <a href="https://code.visualstudio.com/"><img src="https://i.giphy.com/media/IdyAQJVN2kVPNUrojM/200.webp" width="100" /></a>
