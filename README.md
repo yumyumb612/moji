@@ -8,10 +8,9 @@
 <br>
 <dev>
  <b>developer:</b> <br>
-  <dev>
-   <img width="100" height="100" src="https://avatars.githubusercontent.com/u/75433579?v=4"/> 
-   <b>discord:</b> yumyumyumyum#6512 <b>am yumyum aka yum</b>
-  <dev>
+  <img width="100" height="100" src="https://avatars.githubusercontent.com/u/75433579?v=4"/>
+  <br>
+  <b>discord:</b> yumyumyumyum#6512 <br> <b>am yumyum aka yum</b>
 </dev>
 
 <div align="center">
