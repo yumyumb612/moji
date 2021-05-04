@@ -1,11 +1,14 @@
 <!--[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=yumm-b612&theme=onedark&show_icons=true)](https://github.com/anuraghazra/github-readme-stats) [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yumm-b612&layout=compact&theme=onedark)](https://github.com/anuraghazra/github-readme-stats)-->
 
- <h1>moji</h1>
+<h1>moji</h1>
 
- <img align="left" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/moji%20profiles/moji.png"/>
- <i><b>moji the new whoelsome emoji/bot</b></i>
+<img align="left" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/moji%20profiles/moji.png"/>
+
+<i><b>moji the new whoelsome emoji/bot</b></i>
+<dev>
  <b>developer</b> <br>
  <img width="100" height="100" src="https://avatars.githubusercontent.com/u/75433579?v=4"/> <block>yumyumyumyum#6512</block>
+</dev>
 
 <div align="center">
  <br><br>
