@@ -6,8 +6,8 @@
 
 <i><b>moji the new whoelsome emoji/bot</b></i>
 <dev>
- <b>developer</b> <br>
- <img width="100" height="100" src="https://avatars.githubusercontent.com/u/75433579?v=4"/> <block>yumyumyumyum#6512</block>
+ <h5>developer</h5> <br>
+ <img width="100" height="100" src="https://avatars.githubusercontent.com/u/75433579?v=4"/> <b>yumyumyumyum#6512</b>
 </dev>
 
 <div align="center">
