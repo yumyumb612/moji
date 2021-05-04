@@ -15,9 +15,7 @@ join moji's <a href="https://discord.gg/NaXhwqWxV9"><img width="88.6" height="21
 <br><br><br>
 
 <div align="right">
-  <div align="left">
-    <b>powered by</b>
-  </div>
+  <b>powered by</b>
   <br>
   <p>
     <a href="https://code.visualstudio.com/"><img src="https://i.giphy.com/media/IdyAQJVN2kVPNUrojM/200.webp" width="100" /></a>
