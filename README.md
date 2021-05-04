@@ -7,10 +7,10 @@
 <i><b>moji the new whoelsome emoji/bot</b></i>
 <br><br>
 <b>developer:</b> <br>
-<img align="left" width="1" height="1" src="https://avatars.githubusercontent.com/u/75433579?v=4"/>
+<img align="left" width="10" height="10" src="https://avatars.githubusercontent.com/u/75433579?v=4"/>
 <b>discord:</b> yumyumyumyum#6512 <br> <b>hewo am yumyum aka yum</b>
 <br>
-join moji's <a href="https://discord.gg/NaXhwqWxV9"><img width="350" height="100" src="https://discord.com/assets/9babbea9acbfec5302d832bae6c3c184.svg"/></a> server
+join moji's <a href="https://discord.gg/NaXhwqWxV9"><img width="350" height="100" src="https://raw.githubusercontent.com/yumm-b612/moji.py/f888e44b6319f2a9519de7d4fdd04c9294595fad/branding%20logos/discord/Discord-Wordmark-Color.svg"/></a> server
 
 <div align="center">
   <br><br><br>
