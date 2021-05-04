@@ -4,7 +4,7 @@
 <div align="center">
  <h1>moji</h1>
 
- <img width="280" height="300" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/moji.png"/>
+ <img width="280" height="300" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/moji%20profiles/moji.png"/>
  <h4>moji the new whoelsome emoji/bot</h4>
 
 
