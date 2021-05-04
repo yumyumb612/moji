@@ -8,8 +8,7 @@
 <br>
 <dev>
  <b>developer:</b> <br>
- <img width="100" height="100" src="https://avatars.githubusercontent.com/u/75433579?v=4"/>
- <p> <b>discord:</b> yumyumyumyum#6512 <br> <b>am yumyum aka yum</b> </p>
+ <img width="100" height="100" src="https://avatars.githubusercontent.com/u/75433579?v=4"/> <p> <b>discord:</b> yumyumyumyum#6512 <br> <b>am yumyum aka yum</b> </p>
 </dev>
 
 <div align="center">
