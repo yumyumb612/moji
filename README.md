@@ -3,10 +3,10 @@
  <h1>moji</h1>
 
  <img align="left" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/moji%20profiles/moji.png"/>
- <h4>moji the new whoelsome emoji/bot</h4>
+ <i><u><b>moji the new whoelsome emoji/bot</b></u></i>
  <b>developer</b> <br>
  <img width="100" height="100" src="https://avatars.githubusercontent.com/u/75433579?v=4"/>
- yumyumyumyum#6512
+ <block>yumyumyumyum#6512</block>
 
 <div align="center">
  <br><br>
