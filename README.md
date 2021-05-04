@@ -2,7 +2,7 @@
 
 <h1>moji</h1>
 
-<img align="left" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/moji%20profiles/moji.png"/>
+<img align="left" width="302.7px" height="300px" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/moji%20profiles/moji.png"/>
 
 <i><b>moji the new whoelsome emoji/bot</b></i>
 <br><br>
