@@ -12,12 +12,15 @@
 <br><br>
 join moji's <a href="https://discord.gg/NaXhwqWxV9"><img width="88.6" height="21.6" src="https://raw.githubusercontent.com/yumm-b612/moji.py/f888e44b6319f2a9519de7d4fdd04c9294595fad/branding%20logos/discord/Discord-Wordmark-Color.svg"/></a> server
 
+<br><br><br>
+
 <div align="right">
-  <br><br><br>
-  <b>powered by</b>
-  <p>
-   <a href="https://code.visualstudio.com/"><img src="https://i.giphy.com/media/IdyAQJVN2kVPNUrojM/200.webp" width="100" /></a>
-   <a href="https://www.python.org/"><img src="https://i.giphy.com/media/LMt9638dO8dftAjtco/200.webp" width="100" /></a>
-  </p>
+  <dev align="left">
+    <b>powered by</b>
+    <p>
+      <a href="https://code.visualstudio.com/"><img src="https://i.giphy.com/media/IdyAQJVN2kVPNUrojM/200.webp" width="100" /></a>
+      <a href="https://www.python.org/"><img src="https://i.giphy.com/media/LMt9638dO8dftAjtco/200.webp" width="100" /></a>
+    </p>
+  </dev>
  
 </div>
