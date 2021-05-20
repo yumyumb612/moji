@@ -4,7 +4,7 @@
 
 <img align="left" width="302.7px" height="300px" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/moji%20profiles/moji.png"/>
 <br><br>
-<i><b>moji the new whoelsome emoji/bot</b></i>
+<i><b>moji da new whoelsome emoji/bot</b></i>
 <br><br>
 <b>developer:</b> <br>
 <img align="left" width="150" height="150" alt="yum" src="https://avatars.githubusercontent.com/u/75433579?v=4"/>
