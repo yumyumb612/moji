@@ -7,11 +7,13 @@ from discord.ext import commands
 from discord_slash import SlashCommand
 
 import configs.config as config
+import utils.functions.loggers as logger
+import utils.functions.readers as reader
 import utils.functions.tools as tool
 
 ##########################################################
 ##                                                      ##
-##          moji the new whoelesome emoji/bot           ##
+##           moji da new whoelesome emoji/bot           ##
 ##                                                      ##
 ##########################################################
 
@@ -23,7 +25,7 @@ class butt(commands.AutoShardedBot):
             case_insensitive = True,
             reconnect = True,
             intents = config.intents,
-            owner_id = tool.read_config("bot_settings", "owner_id"),
+            owner_id = reader.read_config("bot_settings", "owner_id"),
             status=discord.Status.dnd,
             activity=discord.Game(
                 name="waking up...",
@@ -43,7 +45,7 @@ class butt(commands.AutoShardedBot):
 
     async def on_connect(self):
         print(f"""\n
-        {tool.time}
+        {tool.datetime_now}
         ___________________________________
         user            : {self.user}
         id              : {self.user.id}
@@ -54,43 +56,57 @@ class butt(commands.AutoShardedBot):
         """)
     
     async def on_disconnect(self):
-        tool.logger.system.warning(f"CLIENT DISCONNECTED")
         self.disconnected_datetime = datetime.now()
+        self.disconnected = True
+        uptime = tool.uptime(self, False)
         
         print(f"""\n
-        {tool.time}
+        {tool.datetime_now}
         ___________________________________
         {self.user} got disconnected
-        bot uptime      : {tool.uptime(self, False)}
+        bot uptime      : {uptime}
         """)
+        logger.activity.critical(f"CLIENT DISCONNECTED | uptime:{uptime}")
 
     async def on_resumed(self):
-        reconnected_time = tool.time_delta(self.disconnected_datetime, False)
-        tool.logger.system.warning(f"CLIENT RECONNECTED in {reconnected_time}")
+        reconnection_time = tool.datetime_delta(self.disconnected_datetime, datetime.now(), False)
 
         print(f"""\n
-        {tool.time}
+        {tool.datetime_now}
         ___________________________________
-        {self.user} got reconnected in {reconnected_time}
+        {self.user} got reconnected in {reconnection_time}
         """)
+        logger.activity.info(f"CLIENT RECONNECTED | reconnection time:{reconnection_time}")
 
     async def ready(self):
         await self.wait_until_ready()
         self.login_datetime = datetime.now()
-        data = tool.read_database("counts")
+        data = reader.read_database("counts")
         count = float(data["login_count"]) + 0.0001
         self.login_count = str(count + 0.0001)[2:6]
         data.update({"login_count": count})
-        tool.update_database("counts", data)
+        reader.update_database("counts", data)
 
         self.session = f"{self.version}.{self.login_count}"
 
-        print(f"""
-        bot session     : {self.session}
-        bot users       : {str(len(self.users))}
-        bot guilds      : {str(len(self.guilds))}
-        """)
-        tool.logger.system.info(f"CLIENT ONLINE")
+        if not hasattr(self, "disconnected"):
+            self.disconnected = False
+            print(f"""
+            bot session     : {self.session}
+            bot users       : {str(len(self.users))}
+            bot guilds      : {str(len(self.guilds))}
+            """)
+            logger.activity.info(f"CLIENT ONLINE")
+        else:
+            reconnection_time = tool.datetime_delta(self.disconnected_datetime, datetime.now(), False)
+
+            print(f"""\n
+            {tool.datetime_now}
+            ___________________________________
+            {self.user} got reconnected in {reconnection_time}
+            """)
+            self.disconnected = False
+            logger.activity.info(f"CLIENT RECONNECTED | reconnection time:{reconnection_time}")
 
         await self.change_presence(
             status=discord.Status.online,
@@ -99,4 +115,4 @@ class butt(commands.AutoShardedBot):
                 type=discord.ActivityType.watching))
 
 if __name__ == "__main__":
-    butt().run(tool.classified(tool.read_config("bot_settings", "bot")))
+    butt().run(reader.read_token(reader.read_config("bot_settings", "bot_name")))
