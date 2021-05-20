@@ -1,6 +1,6 @@
 <h1>moji</h1>
-<a href="https://github.com/yumm-b612/moji.py/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/yumm-b612/moji.py?color=9cf&label=License"></a>
-<a href="https://github.com/Rapptz/discord.py"><img alt="Library" src="https://botlist.space/bot/337481187419226113/badge?property=library&style=flat&color=blue"></a>
+<a href="https://github.com/yumm-b612/moji.py/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/yumm-b612/moji.py?style=for-the-badge?color=9cf&label=License"></a>
+<a href="https://github.com/Rapptz/discord.py"><img alt="Library" src="https://botlist.space/bot/337481187419226113/badge?style=for-the-badge?property=library&style=flat&color=blue"></a>
 
 <img align="left" width="302.7px" height="300px" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/moji%20profiles/moji.png"/>
 <br><br>
