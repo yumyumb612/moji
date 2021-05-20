@@ -1,7 +1,7 @@
 <!--[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=yumm-b612&theme=onedark&show_icons=true)](https://github.com/anuraghazra/github-readme-stats) [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yumm-b612&layout=compact&theme=onedark)](https://github.com/anuraghazra/github-readme-stats)-->
 
 <h1>moji</h1>
-<a href="https://github.com/yumm-b612/moji.py/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/yumm-b612/moji.py"></a>
+<a href="https://github.com/yumm-b612/moji.py/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/yumm-b612/moji.py?color=9cf&label=License"></a>
 
 <img align="left" width="302.7px" height="300px" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/moji%20profiles/moji.png"/>
 <br><br>
