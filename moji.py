@@ -4,10 +4,10 @@ from datetime import datetime
 
 import discord
 from discord.ext import commands
-from discord_slash import SlashCommand, SlashCommandOptionType, SlashContext
+from discord_slash import SlashCommand
 
 import configs.config as config
-import utils.tools as tool
+import utils.functions.tools as tool
 
 ##########################################################
 ##                                                      ##
@@ -23,25 +23,30 @@ class butt(commands.AutoShardedBot):
             case_insensitive = True,
             reconnect = True,
             intents = config.intents,
-            owner_id = config.owner_id,
+            owner_id = tool.read_config("bot_settings", "owner_id"),
             status=discord.Status.dnd,
             activity=discord.Game(
                 name="waking up...",
-                type=discord.ActivityType.playing),
-            help_command = None
+                type=discord.ActivityType.playing)
+            # help_command = None
         )
 
-        self.version, self.defaultprefix, self.fuud, self.loaded_modules = "6.1.4", "moji.", "🍞", []
-        logging.basicConfig(level=logging.ERROR)
-        self.load_extension("utils.manager")
+        self.emoji, self.colour, self.loaded_modules =  "<:moji:835960785158144050>", 0x6b9aba, []
+        self.version, self.defaultprefix = config.bot_version, config.defaultprefix
+        slash = SlashCommand(self, sync_commands=True)  #, override_type=True)
+
+        logging.basicConfig(level=logging.INFO)
+        self.load_extension("utils.extensions.logger")
+        self.load_extension("utils.extensions.slash_manager")
         tool.load_modules(self)
         self.loop.create_task(self.ready())
 
     async def on_connect(self):
         print(f"""\n
         {tool.time}
-        ____________________________
-        {self.user.name} is awakening...
+        ___________________________________
+        user            : {self.user}
+        id              : {self.user.id}
         bot version     : {self.version}
         websocket       : {self.ws}
         python version  : {platform.python_version()}
@@ -49,69 +54,49 @@ class butt(commands.AutoShardedBot):
         """)
     
     async def on_disconnect(self):
-        tool.logger.system_logs.info(f"bot offline    | user:[{self.user}] id:{self.user.id}")
+        tool.logger.system.warning(f"CLIENT DISCONNECTED")
+        self.disconnected_datetime = datetime.now()
         
         print(f"""\n
         {tool.time}
-        ____________________________
-        {self.user.name} is offline.
-        bot version     : {self.version}
-        websocket       : {self.ws}
-        python version  : {platform.python_version()}
-        library version : {discord.__version__}
+        ___________________________________
+        {self.user} got disconnected
+        bot uptime      : {tool.uptime(self, False)}
         """)
 
     async def on_resumed(self):
-        tool.logger.system_logs.info("websocket connection resumed")
+        reconnected_time = tool.time_delta(self.disconnected_datetime, False)
+        tool.logger.system.warning(f"CLIENT RECONNECTED in {reconnected_time}")
 
         print(f"""\n
-        {tool.time}: reconnected
-        \n""")
+        {tool.time}
+        ___________________________________
+        {self.user} got reconnected in {reconnected_time}
+        """)
 
     async def ready(self):
         await self.wait_until_ready()
-        self.login_time = datetime.now()
+        self.login_datetime = datetime.now()
+        data = tool.read_database("counts")
+        count = float(data["login_count"]) + 0.0001
+        self.login_count = str(count + 0.0001)[2:6]
+        data.update({"login_count": count})
+        tool.update_database("counts", data)
+
+        self.session = f"{self.version}.{self.login_count}"
 
         print(f"""
-            am online!
-            user   : {self.user}
-            id     : {self.user.id}
-            users  : {str(len(self.users))}
-            guilds : {str(len(self.guilds))}
-            \n""")
-        tool.logger.system_logs.info(f"bot online     | user:[{self.user}] id:[{self.user.id}]")
+        bot session     : {self.session}
+        bot users       : {str(len(self.users))}
+        bot guilds      : {str(len(self.guilds))}
+        """)
+        tool.logger.system.info(f"CLIENT ONLINE")
+
         await self.change_presence(
             status=discord.Status.online,
             activity=discord.Activity(
                 name="evryone", 
                 type=discord.ActivityType.watching))
 
-        slash = SlashCommand(self, sync_commands=True)
-        op = [
-            {
-                "name": "x",
-                "description": "hewo",
-                "required": True,
-                "type": 3,
-            },
-            {
-                "name": "y",
-                "description": "bred is guud",
-                "required": False,
-                "type": 4
-            }
-        ]
-        @slash.slash(
-            name="honk",
-            description="honk, u found a cookie.",
-            guild_ids=[811462348560007198, 796320578490597386, 607721592901861387, 752983891027165194],
-            options=op)
-        async def honk(ctx: SlashCommand, msg, time=None):
-            if int(ctx.author.id) == int(self.owner_id):
-                await ctx.channel.send(content=msg, delete_after=time)
-            else:
-                best_song="""..."""
-                await ctx.send(content=f"**sowy ur not allowd to use dis command!**\n{best_song}", hidden=True)
-
 if __name__ == "__main__":
-    butt().run(tool.classified("moji"))
+    butt().run(tool.classified(tool.read_config("bot_settings", "bot")))
