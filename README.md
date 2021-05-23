@@ -13,7 +13,7 @@
 <br><br>
 -->
 join <a href="https://discord.gg/NaXhwqWxV9"><img width="88.6" height="21.6" alt="Discord" src="https://raw.githubusercontent.com/yumm-b612/moji.py/f888e44b6319f2a9519de7d4fdd04c9294595fad/branding%20logos/discord/Discord-Wordmark-Color.svg"/></a><br>
-<a href="https://invidget.switchblade.xyz/NaXhwqWxV9"></a>
+<img src="https://invidget.switchblade.xyz/NaXhwqWxV9"/a>
 
 <br><br><br>
 
