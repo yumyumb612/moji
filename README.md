@@ -6,14 +6,14 @@
 <br><br>
 <i><b>moji da new whoelsome emoji/bot</b></i>
 <br><br>
+<a href="https://discord.gg/NaXhwqWxV9"><img src="https://invidget.switchblade.xyz/NaXhwqWxV9"/a></a>
 <!--
 <b>developer:</b> <br>
 <img align="left" width="150" height="150" alt="yum" src="https://avatars.githubusercontent.com/u/75433579?v=4"/>
 <b>discord:</b> yumyum#6512 <br> <b>hewo am yumyum aka yum aka kshly</b>
 <br><br>
+<img width="88.6" height="21.6" alt="Discord" src="https://raw.githubusercontent.com/yumm-b612/moji.py/f888e44b6319f2a9519de7d4fdd04c9294595fad/branding%20logos/discord/Discord-Wordmark-Color.svg"/>
 -->
-join <a href="https://discord.gg/NaXhwqWxV9"><img width="88.6" height="21.6" alt="Discord" src="https://raw.githubusercontent.com/yumm-b612/moji.py/f888e44b6319f2a9519de7d4fdd04c9294595fad/branding%20logos/discord/Discord-Wordmark-Color.svg"/></a><br>
-<img src="https://invidget.switchblade.xyz/NaXhwqWxV9"/a>
 
 <br><br><br>
 
