@@ -2,7 +2,7 @@
 <a href="https://github.com/yumm-b612/moji.py/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/yumm-b612/moji.py?style=for-the-badge"></a>
 <a href="https://github.com/Rapptz/discord.py"><img alt="Library" src="https://botlist.space/bot/337481187419226113/badge?property=library&style=for-the-badge&color=blue"></a>
 
-<img align="left" width="302.7px" height="300px" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/moji%20profiles/moji.png"/>
+<img align="left" width="302.7px" height="300px" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/utils/assets/moji.png"/>
 <br><br>
 <i><b>moji da new whoelsome emoji/bot</b></i>
 <br><br>
