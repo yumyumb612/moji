@@ -4,7 +4,7 @@
 
 <img align="left" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/utils/assets/moji.png"/>
 <br>
-<i><b>moji da whoelsome linux bot.</i></b> his a bot and an emoji his MOJI!
+<i><b>moji da whoelsome linux bot.</i></b>
 <br><br>
 <a href="https://discord.gg/NaXhwqWxV9"><img src="https://invidget.switchblade.xyz/NaXhwqWxV9"/a></a>
 <!--
