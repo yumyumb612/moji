@@ -4,8 +4,8 @@ import platform
 from datetime import datetime
 
 import discord
-# from utils.database.mongodb import mongodb
-# import pymongo
+from utils.database.mongodb import mongodb
+import pymongo
 from discord.ext import commands
 from discord_slash import SlashCommand
 from dotenv import load_dotenv
@@ -100,14 +100,14 @@ class butt(commands.AutoShardedBot):
         self.load_extension("utils.extensions.logger")
 
         # database
-        # client = pymongo.MongoClient(os.getenv("MONGODB_CONNECTION_STRING"), serverSelectionTimeoutMS=5000)
-        # db = client["mojidb"]
-        # self.collection = db["guildinfo"]
+        client = pymongo.MongoClient(os.getenv("MONGODB_CONNECTION_STRING"), serverSelectionTimeoutMS=5000)
+        db = client["mojidb"]
+        self.collection = db["guildinfo"]
         
-        # try:
-        #     print(client.server_info())
-        # except Exception:
-        #     print("unable to connect to the server.")
+        try:
+            print(client.server_info())
+        except Exception:
+            print("unable to connect to the server.")
 
         # load modules
         self.load_extension("utils.extensions.slash_manager")
