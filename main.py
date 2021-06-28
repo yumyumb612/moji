@@ -4,20 +4,36 @@ import platform
 from datetime import datetime
 
 import discord
-from utils.database.mongodb import mongodb
-import pymongo
+# from utils.database.mongodb import mongodb
+# import pymongo
 from discord.ext import commands
 from discord_slash import SlashCommand
 from dotenv import load_dotenv
 
 import configs.config as config
-import utils.functions.string_formaters as str_format
 import utils.functions.loggers as logger
 import utils.functions.readers as reader
+import utils.functions.string_formaters as str_format
 import utils.functions.tools as tool
+
 
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "configs/.evn"), override=True)
 class butt(commands.AutoShardedBot):
+
+    class WarningEmbed(discord.Embed):
+        def __init__(self, **kwargs):
+            title= kwargs.pop("title", "MOJI WARNING ⚠️")
+            timestamp = kwargs.pop("timestamp", datetime.now())
+            colour = kwargs.pop("colour", config.colour["warning"])
+            super().__init__(**kwargs, title=title, timestamp=timestamp, colour=colour)
+    
+    class TimeoutErrorEmbed(discord.Embed):
+        def __init__(self, **kwargs):
+            title= kwargs.pop("title", "Timeout Error")
+            description = kwargs.pop("description", "Maximum given time was reached. Pls try again")
+            timestamp = kwargs.pop("timestamp", datetime.now())
+            colour = kwargs.pop("colour", config.colour["error"])
+            super().__init__(**kwargs, title=title, description=description, timestamp=timestamp, colour=colour)
 
     class ErrorEmbed(discord.Embed):
         def __init__(self, **kwargs):
@@ -44,17 +60,35 @@ class butt(commands.AutoShardedBot):
             status=discord.Status.dnd,
             activity=discord.Game(
                 name="waking up...",
-                type=discord.ActivityType.playing),
-            help_command = None
+                type=discord.ActivityType.playing
+            )
+            # help_command = None
         )
 
-        # attributes and variables
+        # setting som things
         self.settings = {
-            "mode": "normal"
+            "mode": "normal",
+            "mood": "cheeky"
         }
-        self.main_colour, self.error_colour = config.colour["main"], config.colour["error"]
+        self.colour = {
+            "main": config.colour["main"],
+            "error": config.colour["error"],
+            "warning": config.colour["warning"],
+            "mood": config.colour["main"]
+        }
+        self.emoji = {
+            "moji": reader.read_emoji("moji"),
+            "mojito": reader.read_emoji("mojito"),
+
+            "discord": reader.read_emoji("discord"),
+
+            "check_mark": reader.read_emoji("check_mark"),
+            "x_mark": reader.read_emoji("x_mark"),
+            "empty_mark": reader.read_emoji("empty_mark")
+        }
         self.boot_datetime, self.loaded_modules =  datetime.now(), []
-        self.version, self.defaultprefix, self.emoji = config.bot_version, config.defaultprefix, config.emoji
+        self.bot_version, self.py_version, self.dpy_version = config.bot_version, platform.python_version(), f"{discord.__version__} {discord.version_info.releaselevel}"
+        self.defaultprefix = config.defaultprefix
         SlashCommand(self, sync_commands=True, sync_on_cog_reload=True, override_type=True)
 
         # logging
@@ -66,14 +100,14 @@ class butt(commands.AutoShardedBot):
         self.load_extension("utils.extensions.logger")
 
         # database
-         client = pymongo.MongoClient(os.getenv("MONGODB_CONNECTION_STRING"), serverSelectionTimeoutMS=5000)
-         db = client["mojidb"]
-         self.collection = db["guildinfo"]
+        # client = pymongo.MongoClient(os.getenv("MONGODB_CONNECTION_STRING"), serverSelectionTimeoutMS=5000)
+        # db = client["mojidb"]
+        # self.collection = db["guildinfo"]
         
-         try:
-             print(client.server_info())
-         except Exception:
-             print("unable to connect to the server.")
+        # try:
+        #     print(client.server_info())
+        # except Exception:
+        #     print("unable to connect to the server.")
 
         # load modules
         self.load_extension("utils.extensions.slash_manager")
@@ -85,11 +119,11 @@ class butt(commands.AutoShardedBot):
         print(f"""\n
         {tool.datetime_EDT_now}
         ___________________________________
-        user            : {self.user}
-        id              : {self.user.id}
-        bot version     : {self.version}
-        python version  : {platform.python_version()}
-        library version : {discord.__version__}
+        user               : {self.user}
+        id                 : {self.user.id}
+        bot version        : {self.bot_version}
+        python version     : {self.py_version}
+        discord.py version : {self.dpy_version}
         """)
     
     async def on_disconnect(self):
@@ -100,7 +134,7 @@ class butt(commands.AutoShardedBot):
         {tool.datetime_EDT_now}
         ___________________________________
         {self.user} got disconnected
-        bot uptime      : {uptime}
+        bot uptime        : {uptime}
         """)
         logger.activity.critical(f"moji got disconnected, been up for {uptime}")
 
@@ -110,32 +144,33 @@ class butt(commands.AutoShardedBot):
         print(f"""\n
         {tool.datetime_EDT_now}
         ___________________________________
-        {self.user} got reconnected in {reconnection_time}
+        {self.user} got reconnected, took {reconnection_time} to reconnect
         """)
         self.disconnected = False
-        logger.activity.info(f"moji got reconnected in {reconnection_time}")
+        logger.activity.info(f"moji got reconnected, took {reconnection_time} to reconnect")
 
     async def ready(self):
         await self.wait_until_ready()
+        self.login_datetime = datetime.now()
         self.owner_object = self.get_user(self.owner_ids[0])
 
-        self.login_datetime = datetime.now()
         data = reader.read_database("counts", "json")
         count = float(data["login_count"]) + 0.0001
-        self.login_count = str(count + 0.0001)[2:6]
         data.update({"login_count": count})
         reader.update_database("counts", data)
 
-        self.session = f"{self.version}.{self.login_count}"
+        self.login_count = str(reader.read_database("counts", "json", "login_count"))[2:6]
+        self.session = f"{self.bot_version}.{self.login_count}"
 
         if not hasattr(self, "disconnected"):
             self.disconnected = False
-            self.boot_datetime = str_format.number_noun(float((datetime.now() - self.boot_datetime).microseconds) / 1000000, "second", False)
+            self.boot_duration = str_format.number_noun(float((datetime.now() - self.boot_datetime).microseconds) / 1000000, "second", False)
             print(f"""
-            bot session     : {self.session}
-            boot time       : {self.boot_datetime}
-            bot users       : {str(len(self.users))}
-            bot guilds      : {str(len(self.guilds))}
+            session       : {self.session}
+            boot duration : {self.boot_duration}
+            users         : {str(len(self.users))}
+            guilds        : {str(len(self.guilds))}
+            emojis        : {str(len(self.emojis))}
             """)
 
             logger.activity.info(f"moji online")
