@@ -4,7 +4,6 @@ import platform
 from datetime import datetime
 
 import discord
-from utils.database.mongodb import mongodb
 import pymongo
 from discord.ext import commands
 from discord_slash import SlashCommand
@@ -19,6 +18,7 @@ import utils.functions.tools as tool
 
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "configs/.evn"), override=True)
 class butt(commands.AutoShardedBot):
+    print("> booting")
 
     class WarningEmbed(discord.Embed):
         def __init__(self, **kwargs):
@@ -92,64 +92,58 @@ class butt(commands.AutoShardedBot):
         SlashCommand(self, sync_commands=True, sync_on_cog_reload=True, override_type=True)
 
         # logging
+        print("> setting up da logger")
         logger = logging.getLogger("discord")
         logger.setLevel(logging.DEBUG if self.settings["mode"] == "debug" else logging.INFO)
         handler = logging.FileHandler(filename=f"{tool.get_path()}/logs/session.log", encoding="utf-8", mode="w")
         handler.setFormatter(logging.Formatter(config.logging_format))
         logger.addHandler(handler)
         self.load_extension("utils.extensions.logger")
+        print("done")
 
         # database
-        client = pymongo.MongoClient(os.getenv("MONGODB_CONNECTION_STRING"), serverSelectionTimeoutMS=5000)
-        db = client["mojidb"]
-        self.collection = db["guildinfo"]
-        
+        print("> connecting to da database")
+        client = pymongo.MongoClient(os.getenv("MONGODB_CONNECTION_STRING"), serverSelectionTimeoutMS=60000)
+        self.db = client["mojidb"]
+        self.configs = self.db["configs"]
+
         try:
-            print(client.server_info())
-        except Exception:
-            print("unable to connect to the server.")
+            client.server_info()
+            print("connected")
+        except Exception as error:
+            print(f"unable to connect: {error}")
 
         # load modules
+        print("> loading modules")
         self.load_extension("utils.extensions.slash_manager")
         tool.load_modules(self)
+        print(f"loaded {len(self.loaded_modules)} modules")
 
-        self.loop.create_task(self.ready())
-
-    async def on_connect(self):
-        print(f"""\n
-        {tool.datetime_EDT_now}
-        ___________________________________
-        user               : {self.user}
-        id                 : {self.user.id}
-        bot version        : {self.bot_version}
-        python version     : {self.py_version}
-        discord.py version : {self.dpy_version}
-        """)
-    
-    async def on_disconnect(self):
-        self.disconnected_datetime, self.disconnected = datetime.now(), True
-        uptime = tool.uptime(self, False)
-
-        print(f"""\n
-        {tool.datetime_EDT_now}
-        ___________________________________
-        {self.user} got disconnected
-        bot uptime        : {uptime}
-        """)
-        logger.activity.critical(f"moji got disconnected, been up for {uptime}")
+        #   create a background loop
+        # self.loop.create_task(self.ready())
 
     async def on_resumed(self):
-        reconnection_time = tool.datetime_delta(self.disconnected_datetime, datetime.now(), False)
-
-        print(f"""\n
-        {tool.datetime_EDT_now}
-        ___________________________________
-        {self.user} got reconnected, took {reconnection_time} to reconnect
-        """)
         self.disconnected = False
-        logger.activity.info(f"moji got reconnected, took {reconnection_time} to reconnect")
 
-    async def ready(self):
+        print(f"\n-----[{self.user} got reconnected]-----\n")
+        logger.activity.info(f"{self.user} got reconnected")
+
+    async def on_connect(self):
+        if not hasattr(self, "disconnected") or not self.disconnected:
+            print(f"\n-----[{self.user} connected to discord]-----\n")
+        else:
+            print(f"\n-----[{self.user} got reconnected]-----\n")
+
+    async def on_disconnect(self):
+        if not hasattr(self, "disconnected"):
+            self.disconnected_datetime, self.disconnected = datetime.now(), True
+
+            print(f"\n-----[{self.user} got disconnected]-----\n")
+            logger.activity.critical(f"{self.user} got disconnected")
+        else:
+            pass
+
+    async def on_ready(self):
         await self.wait_until_ready()
         self.login_datetime = datetime.now()
         self.owner_object = self.get_user(self.owner_ids[0])
@@ -162,33 +156,25 @@ class butt(commands.AutoShardedBot):
         self.login_count = str(reader.read_database("counts", "json", "login_count"))[2:6]
         self.session = f"{self.bot_version}.{self.login_count}"
 
-        if not hasattr(self, "disconnected"):
-            self.disconnected = False
-            self.boot_duration = str_format.number_noun(float((datetime.now() - self.boot_datetime).microseconds) / 1000000, "second", False)
-            print(f"""
-            session       : {self.session}
-            boot duration : {self.boot_duration}
-            users         : {str(len(self.users))}
-            guilds        : {str(len(self.guilds))}
-            emojis        : {str(len(self.emojis))}
-            """)
+        # if not hasattr(self, "disconnected"):
+        self.boot_duration = str_format.number_noun(float((datetime.now() - self.boot_datetime).microseconds) / 1000000, "second", False)
+        print(
+            f"\n----------[{self.user} online]----------"
+            f"\n id            : {self.user.id}"
+            f"\n bot version   : {self.bot_version}"
+            f"\n session       : {self.session}"
+            f"\n boot duration : {self.boot_duration}"
+            f"\n users         : {str(len(self.users))}"
+            f"\n guilds        : {str(len(self.guilds))}"
+            f"\n emojis        : {str(len(self.emojis))}"
+        )
 
-            logger.activity.info(f"moji online")
-        else:
-            reconnection_time = tool.datetime_delta(self.disconnected_datetime, datetime.now(), False)
-
-            print(f"""\n
-            {tool.datetime_EDT_now}
-            ___________________________________
-            {self.user} got reconnected in {reconnection_time}
-            """)
-            self.disconnected = False
-            logger.activity.info(f"moji got reconnected in {reconnection_time}")
+        logger.activity.info(f"moji online")
 
         await self.change_presence(
             status=discord.Status.online,
             activity=discord.Activity(
-                name="evryone", 
+                name="cows fly", 
                 type=discord.ActivityType.watching
             )
         )
