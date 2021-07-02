@@ -119,9 +119,6 @@ class butt(commands.AutoShardedBot):
         tool.load_modules(self)
         print(f"loaded {len(self.loaded_modules)} modules")
 
-        #   create a background loop
-        # self.loop.create_task(self.ready())
-
     async def on_resumed(self):
         self.disconnected = False
 
