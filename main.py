@@ -59,7 +59,7 @@ class butt(commands.AutoShardedBot):
             owner_ids = config.owner_ids,
             status=discord.Status.dnd,
             activity=discord.Game(
-                name="waking up...",
+                name="arising... pls w8",
                 type=discord.ActivityType.playing
             )
             # help_command = None
