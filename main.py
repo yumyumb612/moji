@@ -31,7 +31,7 @@ class butt(commands.AutoShardedBot):
             strip_after_prefix= True
         )
         
-        #   setting som attributes
+        #   attributes
         self.boot_datetime= datetime.utcnow()
         self.cwd: str= cwd
         self.commands_completed= self.commands_errors= self.self_errors= 0
