@@ -10,7 +10,9 @@ from dotenv import load_dotenv
 
 import configs.config as config
 
-load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "configs/.evn"), override=True)
+
+cwd= os.path.dirname(__file__)
+load_dotenv(dotenv_path=os.path.join(cwd, "configs/.evn"), override=True)
 class butt(commands.AutoShardedBot):
     def __init__(self):
         super().__init__(
@@ -31,7 +33,7 @@ class butt(commands.AutoShardedBot):
         
         #   setting som attributes
         self.boot_datetime= datetime.utcnow()
-        self.cwd: str= os.path.dirname(__file__)
+        self.cwd: str= cwd
         self.versions= {
             "bot": "7.0.0 alpha",
             "dpy": f"{discord.__version__} {discord.version_info.releaselevel}",
@@ -86,7 +88,7 @@ class butt(commands.AutoShardedBot):
 if __name__ == "__main__":
     try:
         os.system("clear")
-        print(f"{os.path.dirname(__file__)}/main.py\n")
+        print(f"{cwd}/main.py\n")
         print(f"{datetime.now()}: booting...")
         butt().run(os.getenv("discord_token"))
     except KeyboardInterrupt:
