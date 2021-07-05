@@ -36,7 +36,7 @@ class butt(commands.AutoShardedBot):
         self.cwd: str= cwd
         self.commands_completed= self.commands_errors= self.self_errors= 0
         self.versions= {
-            "bot": "7.0.0 alpha",
+            "bot": config.bot_version,
             "dpy": f"{discord.__version__} {discord.version_info.releaselevel}",
             "py": python_version()
         }
