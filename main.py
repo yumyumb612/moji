@@ -34,6 +34,7 @@ class butt(commands.AutoShardedBot):
         #   setting som attributes
         self.boot_datetime= datetime.utcnow()
         self.cwd: str= cwd
+        self.commands_completed= self.commands_errors= self.self_errors= 0
         self.versions= {
             "bot": "7.0.0 alpha",
             "dpy": f"{discord.__version__} {discord.version_info.releaselevel}",
