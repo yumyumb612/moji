@@ -30,11 +30,11 @@ class butt(commands.AutoShardedBot):
             owner_ids= config.owner_ids,
             strip_after_prefix= True
         )
-        
+
         #   attributes
         self.boot_datetime= datetime.utcnow()
         self.cwd: str= cwd
-        self.commands_completed= self.commands_errors= self.self_errors= 0
+        self.commands_completed= self.command_errors= self.self_errors= 0
         self.versions= {
             "bot": config.bot_version,
             "dpy": f"{discord.__version__} {discord.version_info.releaselevel}",
@@ -49,11 +49,23 @@ class butt(commands.AutoShardedBot):
         print(f"{datetime.now()}: setting up logger...")
         # logging.basicConfig(level=logging.INFO)
 
-        logger = logging.getLogger("discord")
-        logger.setLevel(logging.INFO)
-        handler = logging.FileHandler(filename= f"{self.cwd}/logs/discord.log", encoding="utf-8", mode="w")
-        handler.setFormatter(logging.Formatter(config.logging_format))
-        logger.addHandler(handler)
+        discord_logger = logging.getLogger("discord")
+        discord_logger.setLevel(logging.INFO)
+        discord_handler = logging.FileHandler(filename= f"{self.cwd}/logs/discord.log", encoding="utf-8", mode="w")
+        discord_handler.setFormatter(logging.Formatter(config.logging_format))
+        discord_logger.addHandler(discord_handler)
+
+        self.bot_events_logger = logging.getLogger("bot_events")
+        self.bot_events_logger.setLevel(logging.INFO)
+        bot_events_handler = logging.FileHandler(filename= f"{self.cwd}/logs/bot_events.log", encoding="utf-8", mode="a")
+        bot_events_handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
+        self.bot_events_logger.addHandler(bot_events_handler)
+        
+        self.modules_logger = logging.getLogger("modules")
+        self.modules_logger.setLevel(logging.INFO)
+        modules_handler = logging.FileHandler(filename= f"{self.cwd}/logs/modules.log", encoding="utf-8", mode="a")
+        modules_handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
+        self.modules_logger.addHandler(modules_handler)
         print(f"{datetime.now()}: done setting up logger")
 
         # database
@@ -63,7 +75,7 @@ class butt(commands.AutoShardedBot):
         # self.guild_info = collection(self.db, "guild_info")
         # self.features_data = collection(self.db, "features_data")
         try:
-            mongodb_client.server_info()
+            # mongodb_client.server_info()
             print(f"{datetime.now()}: connected to da database")
         except Exception as error:
             print(f"{datetime.now()}: {error}\n")
@@ -89,11 +101,10 @@ class butt(commands.AutoShardedBot):
 if __name__ == "__main__":
     try:
         os.system("clear")
-        print(f"{cwd}/main.py\n")
-        print(f"{datetime.now()}: booting...")
+        print(f"{datetime.now()}: running {cwd}/main.py")
         butt().run(os.getenv("discord_token"))
     except KeyboardInterrupt:
         print("KeyboardInterrupt")
         butt().close()
     finally:
-        print(f"\n{datetime.now()}: stoped")
+        print(f"\n{datetime.now()}: KeyboardInterrupt")
