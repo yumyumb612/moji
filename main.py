@@ -42,7 +42,7 @@ class butt(AutoShardedBot):
         self.boot_datetime= datetime.utcnow()
         self.cwd: str= cwd
         self.commands_completed= self.commands_run= self.command_errors= self.self_errors= 0
-        self.blocked_users= self.recent_users= []
+        self.blocked_users, self.recent_users= [], []
         self.versions= {
             "bot": settings.bot_version,
             "dpy": f"{discord.__version__} {discord.version_info.releaselevel}",
