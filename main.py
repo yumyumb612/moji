@@ -34,14 +34,10 @@ class butt(AutoShardedBot):
             owner_ids= settings.owner_ids,
             strip_after_prefix= True
         )
-        #   interactions
-        SlashCommand(self, sync_commands=True, sync_on_cog_reload=True, override_type=True)
-        DiscordComponents(self)
-
         #   attributes
         self.boot_datetime= datetime.utcnow()
         self.cwd: str= cwd
-        self.commands_completed= self.commands_run= self.command_errors= self.self_errors= 0
+        self.commands_completed, self.commands_run, self.command_errors, self.self_errors= 0, 0, 0, 0
         self.blocked_users, self.recent_users= [], []
         self.versions= {
             "bot": settings.bot_version,
@@ -55,8 +51,12 @@ class butt(AutoShardedBot):
             "listeners": []
         }
 
+        #   interactions
+        SlashCommand(self, sync_commands=True, sync_on_cog_reload=True, override_type=True)
+        DiscordComponents(self)
+
         #   logging
-        print(f"{datetime.now()}: Setting up logging...")
+        print(f"{datetime.now()}: Setting up logger...")
         # logging.basicConfig(level=logging.INFO)
 
         discord_logger= logging.getLogger("discord")
@@ -69,8 +69,8 @@ class butt(AutoShardedBot):
         self.event_logger= logger.event
         self.command_logger= logger.command
 
-        logger.butt.log(20, "Started logging")
-        print(f"{datetime.now()}: Done setting logging")
+        logger.butt.log(20, "Logging started")
+        print(f"{datetime.now()}: Done setting logger")
 
         # database
         print(f"{datetime.now()}: Connecting to MongoDB database...")
@@ -89,7 +89,7 @@ class butt(AutoShardedBot):
         cog_paths= [f"{self.cwd}/cogs/commands", f"{self.cwd}/cogs/listeners"]
         def load_check(filename):
             return filename.endswith('.py') and not filename.startswith("_")
-        
+
         self.load_extension("helpers.managers.cog_manager")
 
         for path in cog_paths:
@@ -111,7 +111,7 @@ class butt(AutoShardedBot):
                         else:
                             continue
         print(f"{datetime.now()}: Loaded {len(self.cog_counts['loaded'])}/{len(self.cog_counts['all'])} cog(s)")
-        self.butt_logger
+        self.butt_logger.log(20, f"Loaded {len(self.cog_counts['loaded'])}/{len(self.cog_counts['all'])} cog(s)")
 
 if __name__ == "__main__":
     try:
@@ -123,5 +123,5 @@ if __name__ == "__main__":
         print(f"\n{datetime.now()}: Booting got cancelled")
         butt().close()
     finally:
-        logger.butt.log(50, "Closed all running loops")
-        print(f"\n{datetime.now()}: Closed all running loops")
+        logger.butt.log(50, "Closed all running loops. Client offline")
+        print(f"\n{datetime.now()}: Closed all running loops. Client offline")
