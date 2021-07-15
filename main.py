@@ -74,7 +74,7 @@ class butt(AutoShardedBot):
 
         self.butt_logger.log(20, "[Started logging]")
         print(f"{datetime.now()}: Done setting logger")
-
+ 
         # database
         print(f"{datetime.now()}: Connecting to MongoDB database...")
         try:
