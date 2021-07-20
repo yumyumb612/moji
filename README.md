@@ -4,8 +4,8 @@
 
 <img align="left" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/utils/assets/moji/moji_hd.png"/>
 <br>
-<i><b>moji da whoelsome linux bot.</i></b>
-<br><br>
+<i><b>Sir Moji of Honkburg</i></b>
+<br>
 <a href="https://discord.gg/NaXhwqWxV9"><img src="https://invidget.switchblade.xyz/NaXhwqWxV9"/a></a>
 <!--
 <b>developer:</b> <br>
