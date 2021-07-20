@@ -6,7 +6,7 @@ from platform import python_version
 import discord
 import pymongo
 from discord.ext.commands import AutoShardedBot
-from discord_components import DiscordComponents
+# from discord_components import DiscordComponents
 from discord_slash import SlashCommand
 from dotenv import load_dotenv
 
@@ -40,7 +40,7 @@ class butt(AutoShardedBot):
         self.cwd: str= cwd
         self.mood= "cheeky"
         self.colours= settings.colours
-        self.commands_completed, self.commands_run, self.command_errors, self.self_errors= 0, 0, 0, 0
+        self.completed_commands, self.ran_commands, self.command_errors, self.moji_errors= 0, 0, 0, 0
         self.ignored_users, self.recent_users= [], []
         self.versions= {
             "bot": settings.bot_version,
@@ -56,7 +56,7 @@ class butt(AutoShardedBot):
 
         #   interactions
         SlashCommand(self, sync_commands=True, sync_on_cog_reload=True, override_type=True)
-        DiscordComponents(self)
+        # DiscordComponents(self)
 
         #   logging
         print(f"{datetime.now()}: Setting up logger...")
@@ -74,7 +74,7 @@ class butt(AutoShardedBot):
 
         self.butt_logger.log(20, "[Started logging]")
         print(f"{datetime.now()}: Done setting logger")
- 
+
         # database
         print(f"{datetime.now()}: Connecting to MongoDB database...")
         try:
@@ -84,8 +84,7 @@ class butt(AutoShardedBot):
             self.local_function_settings= collection(self.db, "local_function_settings")
 
             # mongodb_client.server_info()
-            # database= mongodb_client.list_database_names()
-            database= [1,2,3]
+            database= mongodb_client.list_database_names()
             print(f"{datetime.now()}: Connected to the database. Found {len(database)}")
             self.butt_logger.log(20, f"[Connected to MongoDB database] Databases: {database}")
         except Exception as error:
