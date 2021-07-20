@@ -1,9 +1,9 @@
 import discord
 
 owner_ids= [622733200917004309]
-bot_version= "7.0.0 alpha"
+bot_version= "1.0.0"
 
-default_prefix= "moji."
+default_prefix= ">"
 description= "Sir Moji of Honkburg."
 home_guild_id= 811462348560007198
 
@@ -17,7 +17,9 @@ intents= discord.Intents.all()
 
 #   Nord Polar Night and Snow Storm 
 #   https://www.nordtheme.com/
-colour= {
+colours= {
+    "main": 0x6b9aba,
+
     "dark1": 0x2e3440,
     "dark2": 0x3b4252,
     "dark3": 0x434c5e,
