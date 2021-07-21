@@ -1,21 +1,13 @@
-<h1>moji</h1>
+<h1>Sir Moji of Honkburg</h1>
+<hr>
+<center>
 <a href="https://github.com/yumm-b612/moji.py/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/yumm-b612/moji.py?style=for-the-badge"></a>
 <a href="https://github.com/Rapptz/discord.py"><img alt="Library" src="https://img.shields.io/badge/Library-discord.py-yellow?style=for-the-badge&logo=appveyor"></a>
 
-<img align="left" src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/utils/assets/moji/moji_hd.png"/>
-<br>
-<i><b>Sir Moji of Honkburg</i></b>
-<br>
-<a href="https://discord.gg/NaXhwqWxV9"><img src="https://invidget.switchblade.xyz/NaXhwqWxV9"/a></a>
+<img src="https://raw.githubusercontent.com/yumm-b612/moji.py/main/utils/assets/moji/moji_hd.png"/>
+</center>
 <!--
-<b>developer:</b> <br>
-<img align="left" width="150" height="150" alt="yum" src="https://avatars.githubusercontent.com/u/75433579?v=4"/>
-<b>discord:</b> yumyum#6512 <br> <b>hewo am yumyum aka yum aka kshly</b>
-<br><br>
-<img width="88.6" height="21.6" alt="Discord" src="https://raw.githubusercontent.com/yumm-b612/moji.py/f888e44b6319f2a9519de7d4fdd04c9294595fad/branding%20logos/discord/Discord-Wordmark-Color.svg"/>
-
-<br><br><br>
-
+<a href="https://discord.gg/NaXhwqWxV9"><img src="https://invidget.switchblade.xyz/NaXhwqWxV9"/a></a>
 <div align="right">
   <b>powered by</b>
   <br>
