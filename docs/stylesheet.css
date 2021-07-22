@@ -23,3 +23,8 @@ body {
     border-radius: 10px;
     text-align: center;
 }
+
+small {
+    font-size: 45%;
+    color: #d8dee9;
+}
