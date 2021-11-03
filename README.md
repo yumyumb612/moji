@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>moji of Honkburg</h1>
+  <h1>moji</h1> <h2>of Honkburg</h2>
   <a href="https://github.com/yumm-b612/moji.py/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/yumm-b612/moji.py?style=for-the-badge"></a>
   <a href="https://github.com/Rapptz/discord.py"><img alt="Library" src="https://img.shields.io/badge/Library-discord.py-yellow?style=for-the-badge&logo=appveyor"></a>
   
