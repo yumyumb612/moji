@@ -8,23 +8,26 @@ body {
 }
 
 .heading { 
-    margin: 10x;
-    padding: 50px;
+    padding: 30px;
     background-color: #4c566a;
     color: #eceff4;
-    border-radius: 50px;
+    border-radius: 40px;
 }
 
-.content1 {
+small {
+    font-size: 45%;
+    color: #d8dee9;
+}
+
+.heading, img {
+    padding-right: 20px;
+}
+
+.prompt {
     margin: 100px;
     padding: 10px;
     background-color: white;
     color: #3b4252;
     border-radius: 10px;
     text-align: center;
-}
-
-small {
-    font-size: 45%;
-    color: #d8dee9;
 }
